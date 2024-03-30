@@ -102,7 +102,7 @@ def padded_numpy(arr):
 # Function to normalize 2D matrix
 def normalize_2d(matrix):
     norm = np.linalg.norm(matrix)
-    matrix = matrix/norm  # normalized matrix
+    matrix = matrix/norm
     return matrix
 
 # Function to prepare array for normalization
@@ -186,7 +186,6 @@ model.compile(optimizer=Adam(learning_rate=0.0003),
 model.summary()
 
 # Train the model
-#model.fit(x=train_data, y=train_labels, validation_split=0.1, batch_size=40, epochs=25, verbose=1)
 history = model.fit(x=train_data, y=train_labels, validation_split=0.1, batch_size=40, epochs= 20, verbose=1)
 
 # Evaluate the model on test data
@@ -196,6 +195,7 @@ print("Test Accuracy:", test_accuracy)
 
 # Save the trained model
 model.save('model.h5')
+
 # Evaluate the model
 predictions = model.predict(x=test_data, batch_size=100, verbose=1)
 rounded_predictions = np.argmax(predictions, axis=-1)
