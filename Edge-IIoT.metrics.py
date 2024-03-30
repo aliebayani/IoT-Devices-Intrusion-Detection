@@ -13,10 +13,13 @@ import keras
 from tensorflow.keras.utils import to_categorical
 from tensorflow.keras.utils import plot_model
 from keras import regularizers
+from sklearn.preprocessing import StandardScaler
+from sklearn import preprocessing
+from sklearn.utils import shuffle
+
 
 df = pd.read_csv('./DNN-EdgeIIoT-dataset.csv', low_memory=False)
 
-from sklearn.utils import shuffle
 drop_columns = ["frame.time", "ip.src_host", "ip.dst_host", "arp.src.proto_ipv4","arp.dst.proto_ipv4",
                 "http.file_data","http.request.full_uri","icmp.transmit_timestamp",
                 "http.request.uri.query", "tcp.options","tcp.payload","tcp.srcport",
@@ -28,10 +31,6 @@ df.drop_duplicates(subset=None, keep="first", inplace=True)
 df = shuffle(df)
 df.isna().sum()
 print(df['Attack_type'].value_counts())
-
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn import preprocessing
 
 def encode_text_dummy(df, name):
     dummies = pd.get_dummies(df[name])
@@ -129,7 +128,6 @@ min_max_scaler = MinMaxScaler()
 X_train =  min_max_scaler.fit_transform(X_train)
 X_test = min_max_scaler.transform(X_test)
 
-# Verify column names
 print(df.columns)
 
 X_train = X_train.reshape(X_train.shape[0], X_train.shape[1], 1)
@@ -157,23 +155,18 @@ import numpy as np
 from keras.models import load_model
 from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix
 
-# Load your saved model
-model = load_model('model.h5')  # Adjust the filename as per your saved model
+model = load_model('model.h5')
 
-# Step 1: Prediction
 y_pred = model.predict(X_test)
 y_pred_classes = np.argmax(y_pred, axis=1)
 
-# Step 2: Convert Predictions and True Labels
 y_true_classes = np.argmax(y_test, axis=1)
 
-# Step 3: Calculate Metrics
 precision = precision_score(y_true_classes, y_pred_classes, average='weighted')
 recall = recall_score(y_true_classes, y_pred_classes, average='weighted')
 f1 = f1_score(y_true_classes, y_pred_classes, average='weighted')
 conf_matrix = confusion_matrix(y_true_classes, y_pred_classes)
 
-# Print Metrics
 print("Precision:", precision)
 print("Recall:", recall)
 print("F1-score:", f1)
