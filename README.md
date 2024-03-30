@@ -20,8 +20,8 @@ In recent years, the proliferation of IoT and IIoT devices has led to an increas
 
 The project utilizes two datasets for training and evaluating the IDS models:
 
-- **CoAP-DDoS Dataset**: A dataset containing network traffic data related to CoAP-based DDoS attacks.
-- **Edge-IIoT Dataset**: A dataset comprising network traffic data from Edge-IIoT environments, including various types of attacks and normal traffic.
+- **<a href="https://www.kaggle.com/datasets/jaredalanmathews/coapddos">CoAP-DDoS Dataset</a>**: A dataset containing network traffic data related to CoAP-based DDoS attacks. <a href="https://ieeexplore.ieee.org/document/9845285">Original Publication</a>.
+- **<a href="https://www.kaggle.com/datasets/mohamedamineferrag/edgeiiotset-cyber-security-dataset-of-iot-iiot">Edge-IIoT Dataset**: A dataset comprising network traffic data from Edge-IIoT environments, including various types of attacks and normal traffic. <a href="https://ieee-dataport.org/documents/edge-iiotset-new-comprehensive-realistic-cyber-security-dataset-iot-and-iiot-applications">Original Publicaiton</a>.
 
 ## CoAP-DDoS Dataset
 
