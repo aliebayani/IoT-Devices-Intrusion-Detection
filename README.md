@@ -1,6 +1,6 @@
 # Intrusion Detection System for IoT and IIoT Networks
 
-This project **(<a href="https://doi.org/10.1109/SCIoT62588.2024.10570107">Our Paper</a>)** focuses on developing intrusion detection systems (IDS) for Internet of Things (IoT) and Industrial Internet of Things (IIoT) networks using machine learning and deep learning techniques. It includes the implementation and evaluation of IDS models using two datasets: CoAP-DDoS and Edge-IIoT.
+This project **(<a href="https://doi.org/10.1109/SCIoT62588.2024.10570107">Our Paper</a>)** centers on enhancing the reliability of Internet of Things (IoT) and Industrial Internet of Things (IIoT) networks using machine learning and deep learning techniques. It includes the implementation and evaluation of deep learning models using two datasets: CoAP-DDoS and Edge-IIoT.
 
 If you use this project, please cite this paper: https://doi.org/10.1109/SCIoT62588.2024.10570107.
 
@@ -16,7 +16,7 @@ If you use this project, please cite this paper: https://doi.org/10.1109/SCIoT62
 
 ## Introduction
 
-In recent years, the proliferation of IoT and IIoT devices has led to an increased risk of cyberattacks targeting these networks. Intrusion detection systems play a crucial role in identifying and mitigating such attacks. This project aims to develop effective IDS models tailored for IoT and IIoT environments.
+In recent years, the proliferation of IoT and IIoT devices has led to an increased risk associated with network traffic in these environments. Machine Learning plays a crucial role in identifying and mitigating such attacks. This project aims to develop effective deep learning models tailored for IoT and IIoT environments.
 
 ## Datasets
 
