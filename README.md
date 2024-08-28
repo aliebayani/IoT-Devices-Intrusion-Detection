@@ -1,6 +1,6 @@
 # Intrusion Detection for IoT and IIoT Networks
 
-This project **(<a href="https://doi.org/10.1109/SCIoT62588.2024.10570107">Our Paper</a>)** centers on enhancing the reliability of Internet of Things (IoT) and Industrial Internet of Things (IIoT) networks using machine learning and deep learning techniques. It includes the implementation and evaluation of deep learning models using two datasets: CoAP-DDoS and Edge-IIoT.
+This project **(<a href="https://doi.org/10.1109/SCIoT62588.2024.10570107">Our Paper</a>)** centers on enhancing the reliability of Internet of Things (IoT) and Industrial Internet of Things (IIoT) networks using machine learning and deep learning techniques. It includes implementing and evaluating deep learning models using two datasets: CoAP-DDoS and Edge-IIoT.
 
 If you use this project, please cite this paper: https://doi.org/10.1109/SCIoT62588.2024.10570107.
 
@@ -33,7 +33,7 @@ The CoAP-DoS dataset consists of network traffic data captured during CoAP-based
 
 ### Preprocessing
 
-Preprocessing steps applied to the CoAP-DoS dataset include median filtering, standard deviation-based filtering, and normalization. These steps help in cleaning the data and preparing it for model training.
+Preprocessing steps applied to the CoAP-DoS dataset include median filtering, standard deviation-based filtering, and normalization. These steps help clean the data and prepare it for model training.
 
 ### Model Architecture
 
@@ -41,7 +41,7 @@ The IDS model architecture for the CoAP-DoS dataset consists of convolutional an
 
 ### Training and Evaluation
 
-The model is trained using the training data from the CoAP-DoS dataset and evaluated using the test data. Training involves optimizing the model's parameters using the Adam optimizer and minimizing the sparse categorical crossentropy loss. The model's performance is evaluated based on accuracy metrics.
+The model is trained using the training data from the CoAP-DoS dataset and evaluated using the test data. Training involves optimizing the model's parameters using the Adam optimizer and minimizing the sparse categorical cross-entropy loss. The model's performance is evaluated based on accuracy metrics.
 
 ## Edge-IIoT Dataset
 
@@ -51,7 +51,7 @@ The Edge-IIoT dataset comprises network traffic data collected from Edge-IIoT en
 
 ### Preprocessing
 
-Preprocessing of the Edge-IIoT dataset involves encoding categorical features, scaling numerical features, and reshaping the data for model compatibility. These preprocessing steps ensure that the data is in a suitable format for training the IDS model.
+Preprocessing the Edge-IIoT dataset involves encoding categorical features, scaling numerical features, and reshaping the data for model compatibility. These preprocessing steps ensure that the data is in a suitable format for training the IDS model.
 
 ### Model Architecture
 
@@ -59,7 +59,7 @@ The IDS model architecture for the Edge-IIoT dataset includes convolutional, poo
 
 ### Training and Evaluation
 
-The model is trained using the preprocessed training data from the Edge-IIoT dataset and evaluated using the test data. Training involves optimizing the model's parameters using the Adam optimizer and minimizing the categorical crossentropy loss. Model performance is assessed using accuracy metrics and confusion matrices.
+The model is trained using the preprocessed training data from the Edge-IIoT dataset and evaluated using the test data. Training involves optimizing the model's parameters using the Adam optimizer and minimizing the categorical cross-entropy loss. Model performance is assessed using accuracy metrics and confusion matrices.
 
 ## Usage
 
@@ -69,10 +69,6 @@ To use the project, follow these steps:
 2. Install the required dependencies mentioned in the `requirements.txt` file.
 3. Run the provided Jupyter notebooks or Python scripts to train and evaluate the IDS models.
 4. Experiment with different hyperparameters and architectures to improve model performance.
-
-## Contributing
-
-Contributions to this project are welcome. If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request on GitHub.
 
 ## License
 
